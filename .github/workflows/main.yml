@@ -38,7 +38,7 @@ jobs:
           # Make the article public if non empty
           published: 
           # Dry run if not empty. Will not send to dev.to
-          dry_run: 1
+          dry_run: 
           # Generate prefix (cover) image links based on the branch and path to markdown files
           auto_prefix: 
           # Path to markdown files (space separated) to be submitted
