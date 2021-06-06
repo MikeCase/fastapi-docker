@@ -32,7 +32,7 @@ jobs:
         uses: shihanng/devto-act@v0.0.6
         with:
           # API key for authentication
-          devto_api_key: ${{ secrets.DEV_API_KEY }}
+          api_key: ${{ secrets.DEV_API_KEY }}
           # Skip generation of links
           skip_generate: 0
           # Make the article public if non empty
