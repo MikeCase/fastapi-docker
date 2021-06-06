@@ -26,31 +26,20 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
-#       - name: Publish to dev.to
-#         uses: sinedied/publish-devto@v1
-#         with:
-#           # Your dev.to personal API key to publish and update articles
-#           devto_key: ${{ secrets.DEV_API_KEY }}
-#           # Your GitHub access token to update files with ID once published
-#           github_token:  ${{ secrets.GITHUB_KEY }}
-#           # One or more glob patterns of files to include
-#           files: /readme.md
-#           # Use conventional commits messages
-#           conventional_commits: 1
-        - name: devto-act
-          # You may pin to the exact commit or the version.
-          # uses: shihanng/devto-act@4fea9ac045f84831a37234be3097799e674a0665
-          uses: shihanng/devto-act@v0.0.6
-          with:
-            # API key for authentication
-            devto_api_key: ${{ secrets.DEV_API_KEY }}
-            # Skip generation of links
-            skip_generate: 0
-            # Make the article public if non empty
-            published: 
-            # Dry run if not empty. Will not send to dev.to
-            dry_run: 1
-            # Generate prefix (cover) image links based on the branch and path to markdown files
-            auto_prefix: 
-            # Path to markdown files (space separated) to be submitted
-            markdown_files: readme.md
+      - name: devto-act
+        # You may pin to the exact commit or the version.
+        # uses: shihanng/devto-act@4fea9ac045f84831a37234be3097799e674a0665
+        uses: shihanng/devto-act@v0.0.6
+        with:
+          # API key for authentication
+          devto_api_key: ${{ secrets.DEV_API_KEY }}
+          # Skip generation of links
+          skip_generate: 0
+          # Make the article public if non empty
+          published: 
+          # Dry run if not empty. Will not send to dev.to
+          dry_run: 1
+          # Generate prefix (cover) image links based on the branch and path to markdown files
+          auto_prefix: 
+          # Path to markdown files (space separated) to be submitted
+          markdown_files: readme.md
