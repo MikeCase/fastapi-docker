@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,7 +32,7 @@ jobs:
           # Your dev.to personal API key to publish and update articles
           devto_key: ${{ secrets.DEV_API_KEY }}
           # Your GitHub access token to update files with ID once published
-          github_token:  ${{ secrets.GIT_HUB_API }}
+          github_token:  ${{ secrets.GITHUB_KEY }}
           # One or more glob patterns of files to include
           files: /readme.md
           # Use conventional commits messages
