@@ -18,11 +18,20 @@ a few files will need to be created.
 
 The following commands will install and create the files you need.
 
-```bash
+```sh
+mkdir -p ~/projects/myproject
+cd ~/projects/myproject
 touch main.py Dockerfile .dockerignore docker-compose.yml
+```
+>Above we create the project directory and the initial files we'll need for the app.
+```sh
+python3.8 -m venv .venv
+source .venv/bin/python
 pip install fastapi hypercorn
 pip freeze > requirements.txt
 ```
+>This code above creates the virtual environment in the CWD.
+In the above commands ~/projects/myproject should be whatever directory you want to put your code into. 
 
 ## The files
 Now to modify the files you just created. Lets start with the fastapi application. 
